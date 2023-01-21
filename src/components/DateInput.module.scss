@@ -1,0 +1,11 @@
+.dateButton {
+  &::after {
+    background-color: inherit;
+    font-size: theme('fontSize.lg');
+  }
+  &:hover {
+    &::after {
+      color: theme('colors.cyan.400');
+    }
+  }
+}
