@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { FC } from 'react';
+import type { FC } from 'react';
 import Layout from '../components/Layout';
 import { api } from '../utils/api';
 
@@ -23,7 +22,7 @@ const Page: FC = () => {
   return (
     <Layout>
       <div className="flex h-full flex-col">
-        <div className="flex grow flex-col gap-2">
+        <div className="flex flex-col gap-2 m-2">
           {users?.map((user) => (
             <div
               className="rounded bg-indigo-700 px-4 py-2 text-white shadow-inner hover:cursor-pointer hover:bg-indigo-400"
@@ -33,10 +32,9 @@ const Page: FC = () => {
               {user.email}:{user.role}
             </div>
           ))}
-        </div>
-        <div className="flex flex-col gap-2">
           {transactions?.map((transaction) => (
             <div
+              key={transaction.id}
               className="flex gap-2 rounded bg-rose-700 px-4 py-2 text-white shadow-inner hover:cursor-pointer hover:bg-rose-400"
               onClick={() => handleDeleteTransaction(transaction.id)}
             >

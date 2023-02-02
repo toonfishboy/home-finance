@@ -10,6 +10,7 @@ services:
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: finance
+      POSTGRES_USER: ${POSTGRES_USER}
 
   #server:
   # image: node:18-alpine

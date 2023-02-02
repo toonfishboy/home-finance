@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@hookform/resolvers': ^2.9.10
   '@prisma/client': ^4.8.1
   '@tanstack/react-query': ^4.22.0
   '@trpc/client': ^10.9.0
@@ -29,7 +28,6 @@ specifiers:
   react: 18.2.0
   react-datepicker: ^4.8.0
   react-dom: 18.2.0
-  react-hook-form: ^7.42.1
   react-icons: ^4.7.1
   sass: ^1.57.1
   superjson: ^1.12.2
@@ -39,7 +37,6 @@ specifiers:
   zod: ^3.20.2
 
 dependencies:
-  '@hookform/resolvers': 2.9.10_react-hook-form@7.42.1
   '@prisma/client': 4.8.1_prisma@4.8.1
   '@tanstack/react-query': 4.22.0_biqbaboplfbrettd7655fr4n2y
   '@trpc/client': 10.9.0_@trpc+server@10.9.0
@@ -51,7 +48,6 @@ dependencies:
   react: 18.2.0
   react-datepicker: 4.8.0_biqbaboplfbrettd7655fr4n2y
   react-dom: 18.2.0_react@18.2.0
-  react-hook-form: 7.42.1_react@18.2.0
   react-icons: 4.7.1_react@18.2.0
   superjson: 1.12.2
   zod: 3.20.2
@@ -235,14 +231,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /@hookform/resolvers/2.9.10_react-hook-form@7.42.1:
-    resolution: {integrity: sha512-JIL1DgJIlH9yuxcNGtyhsWX/PgNltz+5Gr6+8SX9fhXc/hPbEIk6wPI82nhgvp3uUb6ZfAM5mqg/x7KR7NAb+A==}
-    peerDependencies:
-      react-hook-form: ^7.0.0
-    dependencies:
-      react-hook-form: 7.42.1_react@18.2.0
-    dev: false
 
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}
@@ -3246,15 +3234,6 @@ packages:
 
   /react-fast-compare/3.2.0:
     resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
-
-  /react-hook-form/7.42.1_react@18.2.0:
-    resolution: {integrity: sha512-2UIGqwMZksd5HS55crTT1ATLTr0rAI4jS7yVuqTaoRVDhY2Qc4IyjskCmpnmdYqUNOYFy04vW253tb2JRVh+IQ==}
-    engines: {node: '>=12.22.0'}
-    peerDependencies:
-      react: ^16.8.0 || ^17 || ^18
-    dependencies:
-      react: 18.2.0
-    dev: false
 
   /react-icons/4.7.1_react@18.2.0:
     resolution: {integrity: sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==}
