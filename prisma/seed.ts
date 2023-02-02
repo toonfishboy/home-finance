@@ -49,6 +49,22 @@ async function main() {
     },
     update: {},
   });
+
+  const incomeId1 = 'income1';
+
+  await prisma.income.upsert({
+    where: {
+      id: incomeId1,
+    },
+    create: {
+      id: incomeId1,
+      income: 2000.43,
+      start: '2023-01-01T00:00:00.000Z',
+      end: '2023-02-01T00:00:00.000Z',
+      userId: 'vishId',
+    },
+    update: {},
+  });
 }
 
 main()

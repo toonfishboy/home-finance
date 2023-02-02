@@ -1,6 +1,6 @@
 import { FC, Fragment, PropsWithChildren } from 'react';
 
-interface LoadingProps extends PropsWithChildren {
+export interface LoadingProps extends PropsWithChildren {
   isLoading?: boolean;
   isError?: boolean;
   error?: unknown;

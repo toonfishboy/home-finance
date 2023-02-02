@@ -20,6 +20,7 @@ model Transaction {
     user          User            @relation(fields: [userId], references: [id])
     type          TransactionType @default(REGULAR)
     reccuringType RecurringType?
+    spendingType  SpendingType?
 }
 
 enum TransactionType {
@@ -32,6 +33,13 @@ enum RecurringType {
     WEEKLY
     MONTHLY
     YEARLY
+}
+
+enum SpendingType {
+    FOOD
+    HOUSE
+    HOBBY
+    VACATION
 }
 
 model User {

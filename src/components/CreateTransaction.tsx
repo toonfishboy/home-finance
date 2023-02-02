@@ -7,8 +7,6 @@ import { api } from '../utils/api';
 import DateInput from './DateInput';
 import NumberInput from './inputs/NumberInput';
 import ListSelect, { ListOption } from './ListSelect';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
 
 function mapUserToOption(user: User): ListOption {
   return { key: user?.id ?? '', label: user?.userName ?? '' };
@@ -46,12 +44,6 @@ const CreateTransaction: FC<CreateTransactionProps> = ({ refetchTransactions }) 
   const [transaction, setTransaction] = useState<Optional<TransactionProps>>({});
   const selectedUser = users.find((user) => user.id === transaction.userId);
 
-  const { handleSubmit } = useForm<Transaction>({
-    resolver: zodResolver(transactionSchema),
-  });
-
-  const onSubmit: SubmitHandler<Transaction> = (data) => console.log(data);
-
   const handleSave = () => {
     const { userId, amount, date } = transaction;
     if (!userId || !amount || !date) return;
@@ -67,9 +59,9 @@ const CreateTransaction: FC<CreateTransactionProps> = ({ refetchTransactions }) 
   };
 
   return (
-    <div className="flex h-full flex-col gap-2">
+    <div className="flex flex-col gap-2">
       <div className="bg-gradient-to-r from-cyan-800 to-blue-800 p-2 text-lg">Create Transaction</div>
-      <form onSubmit={handleSubmit(onSubmit)} className="mx-2 flex flex-col gap-2">
+      <div className="mx-2 flex flex-col gap-2">
         <div className="flex items-center gap-2">
           <div className="w-24">User</div>
           <ListSelect
@@ -98,8 +90,7 @@ const CreateTransaction: FC<CreateTransactionProps> = ({ refetchTransactions }) 
             isClearable={true}
           />
         </div>
-        <input type="submit" />
-      </form>
+      </div>
       <div className="mx-2">
         <button
           className="flex h-10 items-center rounded bg-gradient-to-r from-rose-700 to-red-700"
